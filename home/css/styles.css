@@ -31,9 +31,14 @@ body {
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 100px; /* Adjust based on your logo size */
+    height: auto;
+    object-fit: contain;
 }
 
 .nav-menu {
@@ -1159,8 +1164,10 @@ h2 {
 }
 
 .footer-logo {
-  width: 100px; /* Adjust based on your logo size */
-  height: auto;
+    width: 100px; 
+    height: auto;
+    object-fit: contain;
+    margin-right: 15px; 
 }
 
 .footer-text {
@@ -1195,3 +1202,4 @@ h2 {
   object-fit: cover;
   border-radius: 50%; /* Ensures the image fits inside the circle */
 }
+
