@@ -216,64 +216,68 @@ h2 {
 
 /* Education Section */
 .education-content {
-display: flex;
-justify-content: center;
-gap: 30px;
-flex-wrap: wrap;
-max-width: 1200px;
-margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .education-card {
-background-color: var(--light-color);
-padding: 20px;
-width: 250px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-border-radius: 8px;
-text-align: left;
-transition: transform var(--transition-duration);
+  background-color: var(--light-color);
+  padding: 20px;
+  width: 300px; /* Width of the card */
+  height: 350px; /* Height to make it more square */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: left;
+  transition: transform var(--transition-duration);
+  border: 2px solid black; /* Black outline around the card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .education-card:hover {
-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+.education-card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px; /* Space between the image and the text */
+}
+
+.education-card-header img {
+  width: 50px; /* Icon size */
+  height: 50px;
+  object-fit: contain; /* Ensure the image fits without distortion */
 }
 
 .education-card h3 {
-font-size: 20px;
-font-weight: 600;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px; /* Small space below the heading */
 }
 
 .education-card p {
-font-size: 14px;
-margin-top: 5px;
+  font-size: 14px;
+  margin-top: 5px; /* Small space above the paragraph */
+  margin-bottom: 5px; /* Small space below the paragraph */
 }
 
-/* Experience Section */
-.experience-content {
-display: flex;
-flex-direction: column;
-gap: 30px;
-max-width: 1200px;
-margin: 0 auto;
+.education-card ul {
+  padding-left: 20px; /* Indentation for list items */
+  margin-top: 5px; /* Small space above the list */
 }
 
-.experience-item {
-background-color: var(--light-color);
-padding: 20px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-border-radius: 8px;
-text-align: left;
-transition: transform var(--transition-duration);
+.education-card li {
+  font-size: 14px;
+  margin-bottom: 3px; /* Small space between list items */
 }
 
-.experience-item:hover {
-transform: translateY(-10px);
-}
-
-.experience-item h3 {
-font-size: 20px;
-font-weight: 600;
-}
 
 /* Skills & Tools Section */
 .skills-tools {
