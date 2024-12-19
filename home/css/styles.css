@@ -177,41 +177,41 @@ h2 {
 
 /* About Section */
 .about-section {
-background-color: var(--secondary-color);
+  background-color: var(--secondary-color);
 }
 
 .about-content {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-max-width: 1200px;
-margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .about-image {
-flex: 1 1 300px;
-text-align: center;
-margin: 0 20px;
+  flex: 1 1 300px;
+  text-align: center;
+  margin: 0 20px;
 }
 
 .about-image img {
-max-width: 250px;
-height: auto;
-border-radius: 50%;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Set the width of the portrait */
+  height: 350px; /* Adjust the height to match the content */
+  object-fit: cover; /* Ensure the image doesn't stretch */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about-text {
-flex: 2 1 500px;
-text-align: justify;
-line-height: 1.8;
-font-size: 16px;
-margin: 0 20px;
+  flex: 2 1 500px;
+  text-align: justify;
+  line-height: 1.8;
+  font-size: 16px;
+  margin: 0 20px;
 }
 
 .about-text strong {
-font-size: 18px;
-color: var(--primary-color);
+  font-size: 18px;
+  color: var(--primary-color);
 }
 
 /* Education Section */
