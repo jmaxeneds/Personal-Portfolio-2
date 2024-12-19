@@ -140,6 +140,7 @@ color: #000;
 display: flex;
 gap: 20px; /* More space between the icons */
 justify-content: center;
+margin-top: 40px;
 }
 
 .icon-circle {
