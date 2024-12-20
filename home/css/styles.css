@@ -893,10 +893,13 @@ transform: scale(1.1); /* Slight zoom effect */
 }
 
 .social-img {
-width: 50px;
-height: 50px;
+width: 30px;
+height: 30px;
 border-radius: 50%; /* Ensures the image fits inside the circle */
+object-fit: cover; /* Ensures the image scales properly within the defined dimensions */
 }
+
+
 
 
 
