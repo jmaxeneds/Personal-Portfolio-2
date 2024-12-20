@@ -875,8 +875,10 @@ color: #fff; /* White text for copyright notice */
 .footer-socials {
   display: flex;
   gap: 20px; /* Space between icons */
+  align-items: center; /* Align icons with the text */
   justify-content: center;
-  margin-top: 20px; /* Adjust vertical spacing */
+  margin-top: 0; /* Removes extra space above buttons */
+    margin-bottom: 0px; /* Adjust to fine-tune alignment */
 }
 
 .social-icon {
