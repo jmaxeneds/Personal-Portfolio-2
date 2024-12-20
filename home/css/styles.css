@@ -873,31 +873,40 @@ color: #fff; /* White text for copyright notice */
 }
 
 .footer-socials {
-display: flex;
-gap: 15px;
+  display: flex;
+  gap: 20px; /* Space between icons */
+  justify-content: center;
+  margin-top: 20px; /* Adjust vertical spacing */
 }
 
 .social-icon {
-display: inline-block;
-width: 50px; /* Size of the icon */
-height: 50px;
-border-radius: 50%; /* Circle shape */
-background-color: white; /* White background */
-padding: 5px;
-transition: transform 0.3s ease, background-color 0.3s ease; /* Hover effect */
+  display: inline-block;
+  text-decoration: none; /* Removes underline for links */
 }
 
-.social-icon:hover {
-background-color: #1a73e8; /* Change background color on hover (LinkedIn's blue or email's color) */
-transform: scale(1.1); /* Slight zoom effect */
+.social-circle {
+  width: 50px;
+  height: 50px;
+  background-color: white; /* Circle background color */
+  border-radius: 50%; /* Circular shape */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centers the icon */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.social-circle:hover {
+  background-color: #1a73e8; /* LinkedIn/email icon background color on hover */
+  transform: scale(1.1); /* Slight zoom effect */
 }
 
 .social-img {
-width: 30px;
-height: 30px;
-border-radius: 50%; /* Ensures the image fits inside the circle */
-object-fit: cover; /* Ensures the image scales properly within the defined dimensions */
+  width: 24px; /* Icon size */
+  height: 24px;
+  object-fit: contain; /* Keeps the icon proportionate */
 }
+
 
 
 
