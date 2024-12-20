@@ -280,6 +280,7 @@ h2 {
 .experience-item {
   background-color: var(--light-color);
   padding: 20px;
+  border: 2px solid black; /* Black outline around the card */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   text-align: left;
@@ -899,7 +900,6 @@ color: #fff; /* White text for copyright notice */
 }
 
 .social-circle:hover {
-  background-color: #1a73e8; /* LinkedIn/email icon background color on hover */
   transform: scale(1.1); /* Slight zoom effect */
 }
 
