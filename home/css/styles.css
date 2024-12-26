@@ -462,7 +462,9 @@ h2 {
   max-width: 450px; 
   aspect-ratio: 4 / 3; 
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid black;
+  border-radius: 10px;   
 }
 
 .portfolio-item img {
