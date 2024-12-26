@@ -400,8 +400,8 @@ h2 {
 
 /* Service Content Styling */
 .service-icon {
-  width: 70px; 
-  height: 70px;
+  max-width: 70px; 
+  max-height: 70px;
   margin-bottom: 1rem; 
 }
 
