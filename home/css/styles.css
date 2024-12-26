@@ -349,6 +349,7 @@ h2 {
   margin: 20px;
   width: 50px;
   height: 50px;
+  object-fit: contain;
 }
 
 /* Services Section */
@@ -672,4 +673,8 @@ color: #fff;
   width: 24px; 
   height: 24px;
   object-fit: contain; 
+}
+
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling across the entire site */
 }
