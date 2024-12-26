@@ -437,6 +437,12 @@ h2 {
   margin: 5px 0;
 }
 
+/* Specific Styling for the Rectangular Logo */
+.rectangular-logo {
+  max-width: 100px; 
+  max-height: 80px; 
+}
+
 /* Portfolio Section */
 .portfolio {
   text-align: center;
