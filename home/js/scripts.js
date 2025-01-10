@@ -1,30 +1,5 @@
-document.querySelectorAll('.nav-menu a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-
-document.addEventListener("DOMContentLoaded", () => {
-  const fadeInElements = document.querySelectorAll('.fade-in');
-  
-  const handleScroll = () => {
-    fadeInElements.forEach(el => {
-      const rect = el.getBoundingClientRect();
-      const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-      if (isVisible) {
-        el.classList.add('visible');
-      }
-    });
-  };
-
-  window.addEventListener('scroll', handleScroll);
-  handleScroll(); 
-});
-
-const app = Vue.createApp({
+// First Vue app (for services)
+const servicesApp = Vue.createApp({
   data() {
     return {
       services: [
@@ -131,26 +106,54 @@ const app = Vue.createApp({
   },
 });
 
-app.mount("#services");
+servicesApp.mount("#services");
 
-const app = Vue.createApp({
-    data() {
-      return {
-        name: '',
-        message: '',
-        submitted: false
-      };
+// Second Vue app (for contact form)
+const contactApp = Vue.createApp({
+  data() {
+    return {
+      name: '',
+      message: '',
+      submitted: false
+    };
+  },
+  methods: {
+    submitForm() {
+      this.submitted = true;  // Show the thank-you message and submitted data
     },
-    methods: {
-      submitForm() {
-        this.submitted = true;  // Show the thank-you message and submitted data
-      },
-      resetForm() {
-        this.name = '';
-        this.message = '';
-        this.submitted = false; // Hide the thank-you message and reset form
-      }
+    resetForm() {
+      this.name = '';
+      this.message = '';
+      this.submitted = false; // Hide the thank-you message and reset form
     }
-  });
+  }
+});
 
-  app.mount('#app');
+contactApp.mount('#app');
+
+// Scroll smooth behavior and fade-in elements code
+document.querySelectorAll('.nav-menu a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeInElements = document.querySelectorAll('.fade-in');
+  
+  const handleScroll = () => {
+    fadeInElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+      if (isVisible) {
+        el.classList.add('visible');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  handleScroll(); 
+});
