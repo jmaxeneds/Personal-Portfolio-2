@@ -687,3 +687,14 @@ h2 {
 html {
   scroll-behavior: smooth; /* Enables smooth scrolling across the entire site */
 }
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px); /* Optional: Slight vertical movement */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0); /* Reset vertical movement */
+}
