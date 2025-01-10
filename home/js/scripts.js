@@ -132,3 +132,25 @@ const app = Vue.createApp({
 });
 
 app.mount("#services");
+
+const app = Vue.createApp({
+    data() {
+      return {
+        name: '',
+        message: '',
+        submitted: false
+      };
+    },
+    methods: {
+      submitForm() {
+        this.submitted = true;  // Show the thank-you message and submitted data
+      },
+      resetForm() {
+        this.name = '';
+        this.message = '';
+        this.submitted = false; // Hide the thank-you message and reset form
+      }
+    }
+  });
+
+  app.mount('#app');
