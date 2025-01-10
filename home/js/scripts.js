@@ -80,10 +80,8 @@ const app = Vue.createApp({
           hoverIcon: "assets/UX UI Design Hover.png",
         },
         {
-          title: "jmds LOGO",
-          icon: "assets/jmds logo white version.png",
-          details: [],
-          hoverIcon: "assets/jmds logo black version.png",
+          icon: "assets/jmds logo white  version.png",
+          hoverIcon: "assets/jmds logo black version.png"
         },
         {
           title: "PROGRAMMING",
