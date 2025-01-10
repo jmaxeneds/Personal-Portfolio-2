@@ -23,3 +23,114 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener('scroll', handleScroll);
   handleScroll(); 
 });
+
+const app = Vue.createApp({
+  data() {
+    return {
+      services: [
+        {
+          title: "GRAPHIC DESIGN",
+          icon: "assets/Graphic Design.png",
+          details: [
+            "Social Media Posts",
+            "Templates",
+            "Presentation Slides",
+            "Digital Products",
+            "Logo Design",
+            "Branding Materials",
+          ],
+          hoverIcon: "assets/Graphic Design Hover.png",
+        },
+        {
+          title: "VIDEO EDITING",
+          icon: "assets/Video Editing.png",
+          details: [
+            "Instagram Reels",
+            "TikTok Videos",
+            "UGC",
+            "Ads",
+            "YouTube Vlogs",
+            "Corporate Videos",
+          ],
+          hoverIcon: "assets/Video Editing Hover.png",
+        },
+        {
+          title: "ADMINISTRATIVE",
+          icon: "assets/Administrative.png",
+          details: [
+            "Data Entry",
+            "Email Management",
+            "Calendar Management",
+            "File Organization",
+            "Research and Documentation",
+          ],
+          hoverIcon: "assets/Administrative Hover.png",
+        },
+        {
+          title: "UX/UI DESIGN",
+          icon: "assets/UX UI Design.png",
+          details: [
+            "Wireframing",
+            "Prototyping",
+            "User Research",
+            "Usability Testing",
+            "Mobile and Web App Interfaces",
+            "Design Systems",
+          ],
+          hoverIcon: "assets/UX UI Design Hover.png",
+        },
+        {
+          title: "jmds LOGO",
+          icon: "assets/jmds logo white version.png",
+          details: [],
+          hoverIcon: "assets/jmds logo black version.png",
+        },
+        {
+          title: "PROGRAMMING",
+          icon: "assets/Programming.png",
+          details: [
+            "HTML/CSS",
+            "JavaScript",
+            "Python",
+            "Website Development",
+            "Basic Database Management",
+          ],
+          hoverIcon: "assets/Programming Hover.png",
+        },
+        {
+          title: "CONTENT CREATION",
+          icon: "assets/Content Creation.png",
+          details: [
+            "Social Media Captions",
+            "Blog Writing",
+            "Product Descriptions",
+            "Visual Content Planning",
+          ],
+          hoverIcon: "assets/Content Creation Hover.png",
+        },
+        {
+          title: "TUTORIAL",
+          icon: "assets/Tutorial.png",
+          details: [
+            "Elementary and High School Math",
+            "Academic Papers",
+          ],
+          hoverIcon: "assets/Tutorial Hover.png",
+        },
+        {
+          title: "SOCIAL MEDIA MANAGEMENT",
+          icon: "assets/Social Media Management.png",
+          details: [
+            "Content Scheduling",
+            "Analytics Tracking",
+            "Engagement Strategies",
+            "Community Management",
+          ],
+          hoverIcon: "assets/Social Media Management Hover.png",
+        },
+      ],
+    };
+  },
+});
+
+app.mount("#services");
