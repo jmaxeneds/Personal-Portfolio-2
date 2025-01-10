@@ -348,21 +348,26 @@ interface for seamless grade management.
 <!-- Contact Section -->
 <div class="fade-in">
 <section class="contact" id="contact">
+  <div id="app" class="contact">
   <div class="contact-container">
     <h2>SEND US YOUR FEEDBACK!</h2>
     <p>What do you think of my website?</p>
-    <form class="contact-form">
-      <div class="form-row">
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email" required>
-      </div>
-      <input type="text" placeholder="Subject" required>
-      <textarea placeholder="Message" rows="5" required></textarea>
+    <form v-on:submit.prevent="submitForm" class="contact-form">
+      <input type="text" v-model="name" placeholder="Full Name" required>
+      <textarea v-model="message" placeholder="Message" rows="5" required></textarea>
       <button type="submit" class="send-btn">SEND MESSAGE</button>
     </form>
+
+    <!-- Display Submitted Data -->
+    <div v-if="submitted">
+      <h3>Thank you, {{ name }}!</h3>
+      <p>Your message: {{ message }}</p>
+      <button class="reset-btn" @click="resetForm">Submit Another</button>
+    </div>
   </div>
-</section>
 </div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 <!-- Footer Section -->
 <footer class="footer">
