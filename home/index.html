@@ -222,29 +222,32 @@
 
 <!-- Service Section -->
 <div class="fade-in">
-<section class="services" id="services">
-  <h2>Services</h2>
-  <div class="service-grid">
-    <div 
-      class="service-item" 
-      v-for="(service, index) in services" 
-      :key="index"
-    >
-      <div class="service-content">
-        <img :src="service.icon" :alt="service.title" class="service-icon">
-        <h3 class="service-title">{{ service.title }}</h3>
+  <div id="services"> <!-- Mount Vue app here -->
+    <section class="services">
+      <h2>Services</h2>
+      <div class="service-grid">
+        <div 
+          class="service-item" 
+          v-for="(service, index) in services" 
+          :key="index"
+        >
+          <div class="service-content">
+            <img :src="service.icon" :alt="service.title" class="service-icon">
+            <h3 class="service-title">{{ service.title }}</h3>
+          </div>
+          <div class="service-hover-content">
+            <ul>
+              <li v-for="(detail, i) in service.details" :key="i">{{ detail }}</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="service-hover-content">
-        <ul>
-          <li v-for="(detail, i) in service.details" :key="i">{{ detail }}</li>
-        </ul>
-      </div>
-    </div>
+    </section>
   </div>
-</section>
-
-<script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
 </div>
+
+<!-- Vue Script -->
+<script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
 
 <!-- Portfolio Section -->
 <div class="fade-in">
@@ -347,26 +350,29 @@ interface for seamless grade management.
 
 <!-- Contact Section -->
 <div class="fade-in">
-<section class="contact" id="contact">
-  <div id="app" class="contact">
-  <div class="contact-container">
-    <h2>SEND US YOUR FEEDBACK!</h2>
-    <p>What do you think of my website?</p>
-    <form v-on:submit.prevent="submitForm" class="contact-form">
-      <input type="text" v-model="name" placeholder="Full Name" required>
-      <textarea v-model="message" placeholder="Message" rows="5" required></textarea>
-      <button type="submit" class="send-btn">SEND MESSAGE</button>
-    </form>
+  <div id="app"> <!-- Mount Vue app here -->
+    <section class="contact" id="contact">
+      <div class="contact-container">
+        <h2>SEND US YOUR FEEDBACK!</h2>
+        <p>What do you think of my website?</p>
+        <form v-on:submit.prevent="submitForm" class="contact-form">
+          <input type="text" v-model="name" placeholder="Full Name" required>
+          <textarea v-model="message" placeholder="Message" rows="5" required></textarea>
+          <button type="submit" class="send-btn">SEND MESSAGE</button>
+        </form>
 
-    <!-- Display Submitted Data -->
-    <div v-if="submitted">
-      <h3>Thank you, {{ name }}!</h3>
-      <p>Your message: {{ message }}</p>
-      <button class="reset-btn" @click="resetForm">Submit Another</button>
-    </div>
+        <!-- Display Submitted Data -->
+        <div v-if="submitted">
+          <h3>Thank you, {{ name }}!</h3>
+          <p>Your message: {{ message }}</p>
+          <button class="reset-btn" @click="resetForm">Submit Another</button>
+        </div>
+      </div>
+    </section>
   </div>
 </div>
 
+<!-- Vue Script -->
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 <!-- Footer Section -->
