@@ -55,10 +55,10 @@ const servicesApp = Vue.createApp({
           hoverIcon: "assets/UX UI Design Hover.png",
         },
         {
-          title: "Want to know more about my services? Just hover over!",
+          title: "Curious? Hover to reveal!",
           icon: "", // No icon for this item
           details: [
-            "Just hover over!",
+            "Check my other services!",
           ],
           hoverIcon: "", // No hover icon
         },
