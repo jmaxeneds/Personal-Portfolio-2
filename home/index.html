@@ -337,53 +337,55 @@
       </div>
       <!-- Contact Section -->
       <div class="fade-in">
-      <div id="app">
-      <!-- Vue app here -->
-      <section class="contact" id="contact">
-         <div class="contact-container">
-            <h2>SEND US YOUR FEEDBACK!</h2>
-            <p>What do you think of my website?</p>
-            <!-- Contact Form -->
-            <form v-on:submit.prevent="submitForm" class="contact-form">
-               <!-- Input for Name -->
-               <input 
-                  type="text" 
-                  v-model="name" 
-                  placeholder="Full Name" 
-                  required 
-                  aria-label="Full Name"
-                  >
-               <!-- Textarea for Message -->
-               <textarea 
-                  v-model="message" 
-                  placeholder="Message" 
-                  rows="5" 
-                  required 
-                  aria-label="Message"
-                  ></textarea>
-               <!-- Submit Button -->
-               <button 
-                  type="submit" 
-                  class="send-btn" 
-                  aria-label="Send Message"
-                  >
-               SEND MESSAGE
-               </button>
-            </form>
-            <!-- Display Submitted Data -->
-            <div v-if="submitted" class="submitted-container">
-               <h3>Thank you, {{ name }}!</h3>
-               <p>Your message: {{ message }}</p>
-               <button 
-                  class="reset-btn" 
-                  @click="resetForm" 
-                  aria-label="Submit Another Message"
-                  >
-               Submit Another
-               </button>
-            </div>
+         <div id="app">
+            <!-- Vue app here -->
+            <section class="contact" id="contact">
+               <div class="contact-container">
+                  <h2>SEND US YOUR FEEDBACK!</h2>
+                  <p>What do you think of my website?</p>
+                  <!-- Contact Form -->
+                  <form v-on:submit.prevent="submitForm" class="contact-form">
+                     <!-- Input for Name -->
+                     <input 
+                        type="text" 
+                        v-model="name" 
+                        placeholder="Full Name" 
+                        required 
+                        aria-label="Full Name"
+                        >
+                     <!-- Textarea for Message -->
+                     <textarea 
+                        v-model="message" 
+                        placeholder="Message" 
+                        rows="5" 
+                        required 
+                        aria-label="Message"
+                        ></textarea>
+                     <!-- Submit Button -->
+                     <button 
+                        type="submit" 
+                        class="send-btn" 
+                        aria-label="Send Message"
+                        >
+                     SEND MESSAGE
+                     </button>
+                  </form>
+                  <!-- Display Submitted Data -->
+                  <div v-if="submitted" class="submitted-container">
+                     <h3>Thank you, {{ name }}!</h3>
+                     <p>Your message: {{ message }}</p>
+                     <button 
+                        class="reset-btn" 
+                        @click="resetForm" 
+                        aria-label="Submit Another Message"
+                        >
+                     Submit Another
+                     </button>
+                  </div>
+               </div>
+            </section>
          </div>
-      </section>
+      </div>
       <!-- Vue Script -->
       <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
       <!-- Footer Section -->
@@ -405,6 +407,7 @@
             </div>
          </div>
       </footer>
+      <!-- Scripts -->
       <script src="js/scripts.js"></script>
    </body>
 </html>
