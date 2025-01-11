@@ -214,18 +214,20 @@
    <section class="services">
       <h2>Services</h2>
       <div class="service-grid">
-         <div class="service-item" v-for="(service, index) in services" :key="index">
+         <div class="service-item" v-for="(service, index) in services" :key="`service-${index}`">
             <div class="service-content">
                <img v-if="service.icon && service.icon.trim() !== ''"
-                    :src="service.icon"
-                    :alt="service.title || 'Service Icon'"
-                    class="service-icon">
+     :src="service.icon || 'fallback-icon.png'"
+     :alt="service.title || 'Service Icon'"
+     class="service-icon"
+     src="fallback-icon.png"
+     alt="Service Icon">
                <h3 class="service-title">{{ service.title }}</h3>
             </div>
             <div class="service-hover-content">
                <ul>
-                  <li v-for="(detail, i) in service.details" :key="i">{{ detail }}</li>
-               </ul>
+  <li v-for="(detail, i) in service.details" :key="i">{{ detail }}</li>
+</ul>
             </div>
          </div>
       </div>
@@ -336,24 +338,50 @@
          <div id="app">
             <!-- Vue app here -->
             <section class="contact" id="contact">
-               <div class="contact-container">
-                  <h2>SEND US YOUR FEEDBACK!</h2>
-                  <p>What do you think of my website?</p>
-                  <form v-on:submit.prevent="submitForm" class="contact-form">
-                     <input type="text" v-model="name" placeholder="Full Name" required>
-                     <textarea v-model="message" placeholder="Message" rows="5" required></textarea>
-                     <button type="submit" class="send-btn">SEND MESSAGE</button>
-                  </form>
-                  <!-- Display Submitted Data -->
-                  <div v-if="submitted">
-                     <h3>Thank you, {{ name }}!</h3>
-                     <p>Your message: {{ message }}</p>
-                     <button class="reset-btn" @click="resetForm">Submit Another</button>
-                  </div>
-               </div>
-            </section>
-         </div>
+   <div class="contact-container">
+      <h2>SEND US YOUR FEEDBACK!</h2>
+      <p>What do you think of my website?</p>
+      <!-- Contact Form -->
+      <form v-on:submit.prevent="submitForm" class="contact-form">
+         <!-- Input for Name -->
+         <input 
+            type="text" 
+            v-model="name" 
+            placeholder="Full Name" 
+            required 
+            aria-label="Full Name"
+         >
+         <!-- Textarea for Message -->
+         <textarea 
+            v-model="message" 
+            placeholder="Message" 
+            rows="5" 
+            required 
+            aria-label="Message"
+         ></textarea>
+         <!-- Submit Button -->
+         <button 
+            type="submit" 
+            class="send-btn" 
+            aria-label="Send Message"
+         >
+            SEND MESSAGE
+         </button>
+      </form>
+      <!-- Display Submitted Data -->
+      <div v-if="submitted" class="submitted-container">
+         <h3>Thank you, {{ name }}!</h3>
+         <p>Your message: {{ message }}</p>
+         <button 
+            class="reset-btn" 
+            @click="resetForm" 
+            aria-label="Submit Another Message"
+         >
+            Submit Another
+         </button>
       </div>
+   </div>
+</section>
       <!-- Vue Script -->
       <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
       <!-- Footer Section -->
