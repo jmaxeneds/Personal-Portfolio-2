@@ -226,26 +226,20 @@
     <section class="services">
       <h2>Services</h2>
       <div class="service-grid">
-        <div 
-          class="service-item" 
-          v-for="(service, index) in services" 
-          :key="index"
-        >
-          <div class="service-content">
-            <img :src="service.icon" :alt="service.title" class="service-icon">
-            <h3 class="service-title">{{ service.title }}</h3>
-          </div>
-          <div class="service-hover-content">
-            <ul>
-              <li v-for="(detail, i) in service.details" :key="i">{{ detail }}</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+        <div class="service-item" v-for="(service, index) in services" :key="index">
+  <div class="service-content">
+    <!-- Only render the icon if it has a value (non-empty string) -->
+    <img v-if="service.icon && service.icon.trim() !== ''" :src="service.icon" :alt="service.title" class="service-icon">
+    <!-- Display text even if no icon is present -->
+    <h3 class="service-title">{{ service.title }}</h3>
+  </div>
+  <div class="service-hover-content">
+    <ul>
+      <li v-for="(detail, i) in service.details" :key="i">{{ detail }}</li>
+    </ul>
   </div>
 </div>
-
+        
 <!-- Vue Script -->
 <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
 
